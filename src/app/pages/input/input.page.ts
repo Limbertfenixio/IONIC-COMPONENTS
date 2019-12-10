@@ -14,6 +14,7 @@ export class InputPage implements OnInit {
     telefono : '',
     descripcion : ''
   }
+  
   constructor() { }
 
   ngOnInit() {

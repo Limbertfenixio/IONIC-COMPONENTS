@@ -58,5 +58,10 @@
       "icon" : "code-working",
       "name": "Stepper",
       "route" : "/stepper"
+    },
+    {
+      "icon" : "albums",
+      "name": "Modal",
+      "route" : "/modal"
     }
   ]

@@ -1,3 +1,4 @@
+import { ModalComponent } from './components/modal/modal.component';
 import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
@@ -18,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
+  entryComponents: [ModalComponent],
   //Declaramos el modulo que vamos a usar
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ComponentsModule, BrowserAnimationsModule , FormsModule, ReactiveFormsModule , MaterialModule, HttpClientModule, RouterModule],
   providers: [

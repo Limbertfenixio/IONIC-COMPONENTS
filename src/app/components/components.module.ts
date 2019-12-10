@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { IonicModule } from '@ionic/angular';
@@ -9,18 +11,21 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
     // IMportamos el modulo de ionic para poder hacer uso de sus componentes
     IonicModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   // Exportarmos el componente para que pueda ser usado por otras paginas
   exports: [
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    ModalComponent
   ]
 })
 export class ComponentsModule { }
