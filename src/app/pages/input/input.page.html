@@ -1,0 +1,30 @@
+<app-header titulo="Inputs - Forms"></app-header>
+
+<ion-content>
+    <ion-label>ES: {{formulario.valid}}</ion-label>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="text" required [(ngModel)]="usuario.nombre" name="nombre" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="email" name="email" required [(ngModel)]="usuario.email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="password" name="password" required [(ngModel)]="usuario.password" minlength="8"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Telefono<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="number" name="telefono" required [(ngModel)]="usuario.telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Descripcion<ion-text color="danger">*</ion-text></ion-label>
+        <ion-textarea required name="descripcion" [(ngModel)]="usuario.descripcion"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" [disabled]="formulario.invalid" name="btnSubmit" expand="full">Enviar formulario</ion-button>
+  </form>
+</ion-content>

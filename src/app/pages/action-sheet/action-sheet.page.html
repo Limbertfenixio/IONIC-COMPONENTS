@@ -1,0 +1,14 @@
+<!-- Usamos el componente header para la parte superior del toolbar -->
+<app-header titulo="action-sheet"></app-header>
+
+<ion-content>
+
+    <!-- Creamos un boton que activara el action sheet cuando se haga click sobre el
+        la propiedad color especifica el estilo del boton
+        La propiedad expand=full le dice al boton que ocupe todo el ancho de la pantalla
+        La propiedad (click) activa el evento click y llama a la funcion presentActionSheet()-->
+    <ion-button color="secondary" expand="full" (click)="presentActionSheet()">
+        Action-sheet
+    </ion-button>
+
+</ion-content>

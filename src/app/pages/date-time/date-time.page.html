@@ -1,0 +1,57 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+        <ion-label>Fecha de Nacimiento</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <!-- Para poder mostrar un calendario en la app colocamos las etiquetas
+          del componente de ionic <ion-datetime> el valor por defecto es MM dd YYYY 
+          para colocar un valor inicial al datetime usamos la propiedad value
+          para modificar el formto de fecha usamos la propiedad display-format
+          para modificar el texto del boton usamos la propiedad cancelText
+          usamo la propiedad de angular ngModel para que obtenga el dato de la variable fechaNaci del arhivo ts
+          la propiedad (ion-change) dispara un evento de angular y activa el evento cambioFecha($event)
+          para evitar  que nos salga error al momento de convertir formatos de hora usamos el [ngModel]='fechaNaci.toISOString()' eso convertira al formato GMT que se requiere
+        -->
+      <ion-datetime placeholder="Nacimiento" 
+                    display-format="YYYY MMMM DD"
+                    cancelText="Cancelar!"
+                    [ngModel]="fechaNaci.toISOString()"
+                    (ionChange) = "cambioFecha($event)" ></ion-datetime>
+      </ion-item>
+
+      <!-- Podemos configurar la fecha minima con la propiedad min y la fecha maxima con la propiedad max -->
+      <ion-item>
+        <ion-label>Restricciones</ion-label>
+        <ion-datetime placeholder="yyyy mm dd" 
+                    display-format="YYYY MMMM DD"
+                    min="2015-01-01"
+                    max="2020-12-31"
+        ></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Restricciones Año</ion-label>
+        <ion-datetime placeholder="yyyy" 
+                    display-format="YYYY"
+                    min="2015"
+                    max="2025"
+                    value="2020"
+        ></ion-datetime>
+      </ion-item>
+
+      <!-- para hacer uso de un Custom date debemos usar la propiedad pickerOptions que buscara la variable customPickerOptions -->
+      <ion-item>
+        <ion-label>CustomDate</ion-label>
+        <ion-datetime [pickerOptions]="customPickerOptions"
+                      [ngModel]="customDate"
+        ></ion-datetime>
+      </ion-item>
+  </ion-list>
+
+
+</ion-content>

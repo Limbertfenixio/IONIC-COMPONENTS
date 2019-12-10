@@ -1,0 +1,64 @@
+Debemos ejecutar los siguientes comandos:
+ng add @angular/material
+
+-Esto no solo instalara el paquete npm, haremos uso del angular cli add que creara los archivos necesarios por nosotros
+como por ejm
+UPDATE src/main.ts (389 bytes)
+UPDATE src/app/app.module.ts (868 bytes)
+UPDATE angular.json (5767 bytes)
+UPDATE src/index.html (865 bytes)
+
+podremos ver el cambio en nuestro modulo en el archivo app.module.ts
+*Importando todos los modulos
+Para usar los componentes de angular, necesitamos importarlos en nuestras paginas
+para ello crearemos un modulo especifico para estos componentes con el siguiente comando
+
+ionic g module material --flat
+En este archivo de modulo, podemos agregar todas las importaciones que necesitamos de angular material
+la opcion --flat ara que no se cree una carpeta por defecto si no que se cree solamente el fichero
+
+en el archivo material.module.ts importamos todos los componentes:
+import {
+  MatTableModule,
+  MatStepperModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatOptionModule,
+  MatSelectModule,
+  MatIconModule,
+  MatPaginatorModule,
+  MatSortModule
+} from "@angular/material";
+
+@NgModule({
+  
+exports: [
+    MatTableModule,
+    MatStepperModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatPaginatorModule,
+    MatSortModule
+  ]
+})
+
+para concluir en el archivo app.module.ts debemos incluir este modulo para que este disponible en toda la aplicacion
+import { MaterialModule } from '../material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+@NgModule({
+  imports: [
+    FormsModule,
+    MaterialModule,
+    ReactiveFormsModule
+  ],
+  declarations: [HomePage]
+})
+
+
+devdatic : https://devdactic.com/angular-material-ionic-4/
+angular material : angularmaterial.docs

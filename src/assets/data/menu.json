@@ -1,0 +1,62 @@
+[
+    {
+      "icon": "american-football",
+      "name": "Action-sheet",
+      "route": "/action-sheet"
+    },
+    {
+      "icon": "appstore",
+      "name": "Alerts",
+      "route": "/alert"
+    },
+    {
+      "icon": "beaker",
+      "name": "Avatar-Chips",
+      "route": "/avatar"
+    },
+    {
+      "icon": "radio-button-on",
+      "name": "Botones",
+      "route": "/buttons"
+    },
+    {
+      "icon": "card",
+      "name": "Card",
+      "route": "/card"
+    },
+    {
+      "icon": "checkmark-circle-outline",
+      "name": "Checkbox",
+      "route": "/checkbox"
+    },
+    {
+      "icon": "calendar",
+      "name": "DateTime",
+      "route": "/date-time"
+    },
+    {
+      "icon": "car",
+      "name": "Fabs",
+      "route": "/fab"
+    },
+    {
+      "icon": "grid",
+      "name": "Grid - Rows",
+      "route": "/grid"
+    },
+    {
+      "icon" : "infinite",
+      "name" : "Infinite Scroll",
+      "route" : "/infinite-scroll"
+    },
+    {
+      "icon" : "hammer",
+      "name" : "Input-Forms",
+      "route" : "/input"
+    },
+    {
+      "icon" : "code-working",
+      "name": "Stepper",
+      "route" : "/stepper"
+    }
+  ]

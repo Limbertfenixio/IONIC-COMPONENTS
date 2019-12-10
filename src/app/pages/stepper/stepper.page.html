@@ -1,0 +1,35 @@
+<app-header titulo="Stepper"></app-header>
+
+<ion-content> 
+  <mat-horizontal-stepper [linear]="isLinear" #stepper [selectedIndex]="cont">
+ 
+    <mat-step completed="{{f1}}">
+      <div>
+          <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+   
+    <mat-step completed="{{f2}}">
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step completed="{{f3}}">
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    
+    <mat-step completed="{{f4}}">
+      <div>
+        <button  (click)="stepper.previous()">Back</button>
+        <button  (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+   
+  </mat-horizontal-stepper>
+  
+</ion-content>

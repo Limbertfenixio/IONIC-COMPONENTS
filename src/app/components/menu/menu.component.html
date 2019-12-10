@@ -1,0 +1,24 @@
+<!-- 
+  side: de que lado se debe de mostrar el menu 
+  menuId: Identificador del menú
+  contentId: Identificador del contenedor que empujara el menu
+-->
+<ion-menu side="start" menuId="first" contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Ion Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <!-- Usamos el componente ion-menu-toggle para hacer que el menu se cierre
+          cuando se escoja una opción-->
+      <ion-menu-toggle *ngFor="let c of componentes | async">
+        <ion-item [routerLink]="c.route">
+          <ion-icon slot="start" color="primary" [name]="c.icon"></ion-icon>
+          <ion-label>{{c.name}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

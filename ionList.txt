@@ -1,0 +1,47 @@
+***** LISTAS ORDENADAS CON ION-LIST ********
+
+
+Para poder usar listas debemos llamar al componente <ion-list>
+y para colocar filas llamamos al componente <ion-item>
+para poner el contenido usamos <ion-label> ejm:
+
+  <ion-list>
+    <!-- Usamos la directiva ngFor de angular para recorrer el array de componentes 
+         y usamos la propiedad detail para mostrar un icono de ver mas 
+        tambien accedemos a la propiedad routerLink entre corchetes para que busque la variable -->
+    <ion-item *ngFor="let c of componentes" detail [routerLink] = "c.route">
+      <!-- Usamos la propiedad name para establecer un icono y la propiedad slot para ponerlo 
+          al inicio de la lista -->
+      <ion-icon [name]="c.icon" slot="start"></ion-icon>
+      <!-- Como texto de la lista ponemos el contenido del objeto name del array de componentes -->
+      <ion-label> {{ c.name }} </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  para poder pasar arrays o datos a la lista debemos programar la logica dentro del archivo
+  typescript ejm: inicio.page.ts
+
+  /* Creamos un array de tipo Componente que es una interfaz y vaciamos los objetos 
+     que este tiene podemos crear mas de un objeto de este tipo separandolo por comoas y entre llaves*/
+  componentes : Componente [] = [
+    {
+      icon: 'american-football',
+      name: 'Action-sheet',
+      route: '/action-sheet'
+    },
+    {
+      icon: 'appstore',
+      name: 'Alerts',
+      route: '/alert'
+    },
+  ];
+
+/*
+  Interfaz para poner los objetos que contendra el componente
+*/
+interface Componente{
+  'icon' : string;
+  'name' : string;
+  'route' : string;
+}

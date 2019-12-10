@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Icono y funcionalidad del menu personalizado
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button> -->
+      <ion-menu-button color="primary" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- Usamos la directiva ngFor de angular para recorrer el array de componentes 
+         y usamos la propiedad detail para mostrar un icono de ver mas 
+        tambien accedemos a la propiedad routerLink entre corchetes para que busque la variable -->
+    <ion-item *ngFor="let c of componentes | async" detail [routerLink] = "c.route">
+      <!-- Usamos la propiedad name para establecer un icono y la propiedad slot para ponerlo 
+          al inicio de la lista -->
+      <ion-icon color="primary" [name]="c.icon" slot="start"></ion-icon>
+      <!-- Como texto de la lista ponemos el contenido del objeto name del array de componentes -->
+      <ion-label> {{ c.name }} </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- Direccionamos a otra vista con la propiedad de angular routerLink="ruta destino" 
+  <ion-button routerLink="/alert">Alert</ion-button>
+  <ion-button routerLink="/action-sheet">Action-Sheet</ion-button>-->
+
+</ion-content>

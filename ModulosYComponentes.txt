@@ -1,0 +1,74 @@
+******** MODULOS Y COMPONENTES ********
+
+
+
+
+para poder crear un nuevo modulo usamos el comando
+
+ionic g module nombre del modulo ejm
+ionic g module components
+
+
+para poder crear un nuvo componente usamo el comando
+
+ionic g component ruta/nombre del componente ejm
+ionic g component components/header spec=false
+
+
+El modulo se creara en la carpeta component y contendra todas las importaciones y exportaciones
+de todos los componentes  dentro de el debemos importar el modulo de ionic para poder usar sus componentes
+
+// importamos el modulo de ionic
+import { IonicModule } from '@ionic/angular';
+// IMportamos el componente
+import { HeaderComponent } from './header/header.component';
+
+@NgModule({
+    //Declaramos el componente a usar
+  declarations: [
+    HeaderComponent
+  ],
+  imports: [
+    CommonModule,
+    // IMportamos el modulo de ionic para poder hacer uso de sus componentes
+    IonicModule
+  ],
+  // Exportarmos el componente para que pueda ser usado por otras paginas
+  exports: [
+    HeaderComponent
+  ]
+})
+
+
+Para que otras paginas puedan usar el componente es necesario registrar el modulo dentro del archivo
+app.module.ts
+
+// Importamos el modulo que queremos incluir
+import { ComponentsModule } from './components/components.module';
+//Declaramos el modulo que vamos a usar
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ComponentsModule],
+
+Tambien se debe registrar el modulo dentro de los modulos de las paginas ejm: para alert.module.ts
+
+// Importamos el ComponentsModulo
+import { ComponentsModule } from './../../components/components.module';
+//Declaramos que usaremos el ComponentsModule
+    ComponentsModule
+
+Para que el componente pueda recibir parametros para poder cambiar datos dentro de los elementos de ionic
+debemos registrar el metodo @Input() de angular en el archivo typescript por ejm: para header.component.ts
+
+// Importamos el metodo Input de Angular
+import { Component, OnInit, Input } from '@angular/core';
+// Declaramos la variable titulo de tipo string
+  @Input() titulo: string;
+
+Con eso solamente debemos llamar a la variable titulo para asignarle un valor ejm:
+Componente:
+<!-- Usamo la propiedad text-capitalize para que el texto tenga las iniciales en mayuscula
+      Ademas entre llavez ponemos la variable que vamos a recibir dede las paginas html  -->
+    <ion-title text-capitalize>{{ titulo }}</ion-title>
+Pagina:
+<!-- Usamos el componente header para la parte superior del toolbar  
+  y usamos la propiedad titulo como variable para pasarle el dato al componente-->
+<app-header titulo="alert page"></app-header>

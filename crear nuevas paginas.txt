@@ -1,0 +1,18 @@
+****** Crear NUevas paginas para la aplicacion ******
+
+
+para generar nuevas paginas para la aplicacion ejecuramos el comando:
+
+ionic generate page ruta de la carpeta/nombre de la pagina 
+
+o tambien
+
+ionic g page ruta de la carpeta/nombre de la pagina 
+
+por ejemplo si quiero generar una pagina llamada alerts
+
+ionic g page pages/alert
+
+para que no cree un archivo de testing usamos el comando
+
+ionic g page pages/alert --spec=false

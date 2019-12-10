@@ -1,0 +1,9 @@
+****** NAVEGACION ENTRE PAGINAS ******
+
+
+para poder navegar entre paginas pulsando un boton 
+usamo la directiva de angular routerLink='ruta a ir'
+
+
+por ejemplo si deseamos ir a otra vista haciendo click en un boton
+<ion-button routerLink="/alert">Alert</ion-button>

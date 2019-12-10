@@ -1,0 +1,146 @@
+***** BACKBUTTON O BOTON DE VOLVER ATRAS *****
+
+
+
+para poder agregar un boton de back para retroceder una vista usamos 
+el componente <ion-buttons> y <ion-back-button> para que el icono de volver 
+se pueda notar de manera correcta al inicio del header de la app usamos la propiedad
+slot="start" de la siguiente manera
+
+<ion-header>
+  <ion-toolbar>
+    <!-- Indicamos que queremos el boton de back al inicio del toolbar -->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+!!Documentacion
+<!-- Default back button -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Back button with a default href -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Back button with custom text and icon -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Back button with no text and custom icon -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="add"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Danger back button next to a menu button -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+color
+Descripción	
+El color a usar de la paleta de colores de su aplicación. Las opciones por defecto son: "primary", "secondary", "tertiary", "success", "warning", "danger", "light", "medium", y "dark". Para obtener más información sobre colores, veatemática.
+
+Atributo	color
+Tipo	string | undefined
+defaultHref
+Descripción	
+La url para volver a navegar por defecto cuando no hay historial.
+
+Atributo	default-href
+Tipo	string | undefined
+discapacitado
+Descripción	
+Si true, el usuario no puede interactuar con el botón.
+
+Atributo	disabled
+Tipo	boolean
+Defecto	false
+icono
+Descripción	
+El nombre del icono que se usará para el botón Atrás.
+
+Atributo	icon
+Tipo	null | string | undefined
+modo
+Descripción	
+El modo determina qué estilos de plataforma usar.
+
+Atributo	mode
+Tipo	"ios" | "md"
+texto
+Descripción	
+El texto que se mostrará en el botón Atrás.
+
+Atributo	text
+Tipo	null | string | undefined
+tipo
+Descripción	
+El tipo del botón.
+
+Atributo	type
+Tipo	"button" | "reset" | "submit"
+Defecto	'button'
+Propiedades personalizadas de CSS
+Nombre	Descripción
+--background	Fondo del botón
+--background-focused	Fondo del botón cuando se enfoca con la tecla de tabulación
+--background-hover	Fondo del botón al pasar el mouse
+--border-radius	Radio del borde del botón
+--color	Color del texto del botón.
+--color-focused	Color del texto del botón cuando se enfoca con la tecla de tabulación
+--color-hover	Color del texto del botón al pasar el mouse
+--icon-font-size	Tamaño de fuente del icono del botón
+--icon-font-weight	Peso de la fuente del icono del botón
+--icon-margin-bottom	Margen inferior del ícono del botón
+--icon-margin-end	Margen derecho si la dirección es de izquierda a derecha, y margen izquierdo si la dirección es de derecha a izquierda del icono del botón
+--icon-margin-start	Margen izquierdo si la dirección es de izquierda a derecha, y margen derecho si la dirección es de derecha a izquierda del icono del botón
+--icon-margin-top	Margen superior del ícono del botón
+--icon-padding-bottom	Relleno inferior del ícono del botón
+--icon-padding-end	Relleno derecho si la dirección es de izquierda a derecha, y relleno izquierdo si la dirección es de derecha a izquierda del icono del botón
+--icon-padding-start	Relleno izquierdo si la dirección es de izquierda a derecha, y relleno derecho si la dirección es de derecha a izquierda del icono del botón
+--icon-padding-top	Relleno superior del ícono del botón
+--margin-bottom	Margen inferior del botón
+--margin-end	Margen derecho si la dirección es de izquierda a derecha, y margen izquierdo si la dirección es de derecha a izquierda del botón
+--margin-start	Margen izquierdo si la dirección es de izquierda a derecha, y margen derecho si la dirección es de derecha a izquierda del botón
+--margin-top	Margen superior del botón
+--min-height	Altura mínima del botón.
+--min-width	Ancho mínimo del botón
+--opacity	Opacidad del botón
+--padding-bottom	Relleno inferior del botón
+--padding-end	Relleno derecho si la dirección es de izquierda a derecha, y relleno izquierdo si la dirección es de derecha a izquierda del botón
+--padding-start	Relleno izquierdo si la dirección es de izquierda a derecha, y relleno derecho si la dirección es de derecha a izquierda del botón
+--padding-top	Relleno superior del botón
+--ripple-color	Color del efecto de ondulación del botón
+--transition	Transición del botón

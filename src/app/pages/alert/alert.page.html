@@ -1,0 +1,15 @@
+<!-- Usamos el componente header para la parte superior del toolbar  
+  y usamos la propiedad titulo como variable para pasarle el dato al componente
+<app-header titulo="alert page"></app-header>-->
+<!-- Le decimos a la propiedad titulo que busque la varible titulo o la cadena 'alert page' -->
+<app-header [titulo]="titulo  || 'alert page'"></app-header>
+
+<ion-content>
+<!-- Llamamos a las funciones que desplegaran los alerts -->
+<ion-button color="primary" expand="full" (click)="presentAlert()"> 
+  Mostrar Alerta  
+</ion-button>
+<ion-button color="secondary  " expand="full" (click)="inputAlert()"> 
+  Mostrar Input
+</ion-button>
+</ion-content>

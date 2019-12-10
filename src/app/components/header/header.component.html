@@ -1,0 +1,13 @@
+<!-- Componente Header -->
+<ion-header no-border translucent>
+  <ion-toolbar>
+    <!-- Indicamos que queremos el boton de back al inicio del toolbar -->
+    <ion-buttons slot="start">
+      <!-- Es muy importante declarar el atributo defaultHref para que el boton tenga una ruta por defecto -->
+        <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <!-- Usamo la propiedad text-capitalize para que el texto tenga las iniciales en mayuscula
+      Ademas entre llavez ponemos la variable que vamos a recibir dede las paginas html  -->
+    <ion-title text-capitalize>{{ titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
