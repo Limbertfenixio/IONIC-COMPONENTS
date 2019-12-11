@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'stepper', loadChildren: './pages/stepper/stepper.module#StepperPageModule' },
   { path: 'infinite-scroll', loadChildren: './pages/infinite-scroll/infinite-scroll.module#InfiniteScrollPageModule' },
   { path: 'input', loadChildren: './pages/input/input.module#InputPageModule' },
-  { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' }
+  { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
+  { path: 'loading', loadChildren: './pages/loading/loading.module#LoadingPageModule' },
+  { path: 'datatables', loadChildren: './pages/datatables/datatables.module#DatatablesPageModule' }
 ];
 @NgModule({
   imports: [

@@ -14,6 +14,9 @@ export class InputPage implements OnInit {
     telefono : '',
     descripcion : ''
   }
+
+  passwordType : string = "password";
+  passwordShow : boolean = false;
   
   constructor() { }
 
@@ -22,6 +25,16 @@ export class InputPage implements OnInit {
 
   onSubmit(){
     console.log(this.usuario);
+  }
+
+  toggle(){
+    if(this.passwordShow){
+      this.passwordShow = false;
+      this.passwordType = "password";
+    }else{
+      this.passwordShow = true;
+      this.passwordType = "text";
+    }
   }
 
 }

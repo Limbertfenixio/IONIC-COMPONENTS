@@ -14,7 +14,8 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Password<ion-text color="danger">*</ion-text></ion-label>
-        <ion-input type="password" name="password" required [(ngModel)]="usuario.password" minlength="8"></ion-input>
+        <ion-input [type]="passwordType"  name="password" required [(ngModel)]="usuario.password" minlength="8" ></ion-input>
+        <ion-icon name="eye" [color]="passwordShow === true ? 'dark' : 'gray'" slot="end" (click)="toggle()"></ion-icon>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Telefono<ion-text color="danger">*</ion-text></ion-label>

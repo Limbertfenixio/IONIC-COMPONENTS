@@ -63,5 +63,16 @@
       "icon" : "albums",
       "name": "Modal",
       "route" : "/modal"
+    },
+    {
+      "icon" : "refresh-circle",
+      "name": "Loading",
+      "route" : "/loading"
+    }
+    ,
+    {
+      "icon" : "bookmark",
+      "name": "DataTables",
+      "route" : "/datatables"
     }
   ]
