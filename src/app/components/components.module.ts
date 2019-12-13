@@ -1,7 +1,9 @@
+import { SplashComponent } from './splash/splash.component';
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+
 import { IonicModule } from '@ionic/angular';
 // IMportamos el componente
 import { HeaderComponent } from './header/header.component';

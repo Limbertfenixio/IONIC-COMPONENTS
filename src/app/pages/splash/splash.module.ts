@@ -1,17 +1,16 @@
-import { ComponentsModule } from 'src/app/components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-
-import { LoadingPage } from './loading.page';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { SplashPage } from './splash.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoadingPage
+    component: SplashPage
   }
 ];
 
@@ -23,6 +22,6 @@ const routes: Routes = [
     ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LoadingPage]
+  declarations: [SplashPage]
 })
-export class LoadingPageModule {}
+export class SplashPageModule {}

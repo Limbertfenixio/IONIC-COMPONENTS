@@ -68,11 +68,15 @@
       "icon" : "refresh-circle",
       "name": "Loading",
       "route" : "/loading"
-    }
-    ,
+    },
     {
       "icon" : "bookmark",
       "name": "DataTables",
       "route" : "/datatables"
+    },
+    {
+      "icon" : "aperture",
+      "name": "Splash",
+      "route" : "/splash"
     }
   ]

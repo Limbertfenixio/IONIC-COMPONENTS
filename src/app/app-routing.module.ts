@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'input', loadChildren: './pages/input/input.module#InputPageModule' },
   { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
   { path: 'loading', loadChildren: './pages/loading/loading.module#LoadingPageModule' },
-  { path: 'datatables', loadChildren: './pages/datatables/datatables.module#DatatablesPageModule' }
+  { path: 'datatables', loadChildren: './pages/datatables/datatables.module#DatatablesPageModule' },
+  { path: 'splash', loadChildren: './pages/splash/splash.module#SplashPageModule' }
 ];
 @NgModule({
   imports: [
