@@ -78,5 +78,20 @@
       "icon" : "aperture",
       "name": "Splash",
       "route" : "/splash"
+    },
+    {
+      "icon" : "list",
+      "name" : "List - Sliding",
+      "route" : "/list"
+    },
+    {
+      "icon" : "reorder",
+      "name" : "List - Reorder",
+      "route" : "/reorder"
+    },
+    {
+      "icon" : "tablet-portrait",
+      "name" : "Popover",
+      "route" : "/popover"
     }
   ]

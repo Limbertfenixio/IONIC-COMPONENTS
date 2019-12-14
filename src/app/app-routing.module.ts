@@ -21,7 +21,10 @@ const routes: Routes = [
   { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
   { path: 'loading', loadChildren: './pages/loading/loading.module#LoadingPageModule' },
   { path: 'datatables', loadChildren: './pages/datatables/datatables.module#DatatablesPageModule' },
-  { path: 'splash', loadChildren: './pages/splash/splash.module#SplashPageModule' }
+  { path: 'splash', loadChildren: './pages/splash/splash.module#SplashPageModule' },
+  { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' },
+  { path: 'reorder', loadChildren: './pages/reorder/reorder.module#ReorderPageModule' },
+  { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' }
 ];
 @NgModule({
   imports: [

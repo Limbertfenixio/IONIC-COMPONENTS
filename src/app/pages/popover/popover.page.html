@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>popover</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="showPopover( $event )">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Pasamos el evento para posicionar el popover desde el lugar que se hizo click -->
+    <ion-button (click)="showPopover( $event )" expand="full">
+        <ion-icon slot="icon-only" name="contact"></ion-icon>
+    </ion-button>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="primary">
+        <ion-title>Footer</ion-title>
+        <ion-buttons slot="start">
+          <ion-button (click)="showPopover( $event )">
+            <ion-icon slot="icon-only" name="contact"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+</ion-footer>

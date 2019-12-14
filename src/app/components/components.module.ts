@@ -1,3 +1,4 @@
+import { PopoverComponent } from './popover/popover.component';
 import { SplashComponent } from './splash/splash.component';
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
   declarations: [
     HeaderComponent,
     MenuComponent,
-    ModalComponent
+    ModalComponent,
+    PopoverComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { CommonModule } from '@angular/common';
   exports: [
     HeaderComponent,
     MenuComponent,
-    ModalComponent
+    ModalComponent,
+    PopoverComponent
   ]
 })
 export class ComponentsModule { }
