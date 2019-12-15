@@ -25,7 +25,9 @@ const routes: Routes = [
   { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' },
   { path: 'reorder', loadChildren: './pages/reorder/reorder.module#ReorderPageModule' },
   { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' },
-  { path: 'progressbar-range', loadChildren: './pages/progressbar-range/progressbar-range.module#ProgressbarRangePageModule' }
+  { path: 'progressbar-range', loadChildren: './pages/progressbar-range/progressbar-range.module#ProgressbarRangePageModule' },
+  { path: 'refresher', loadChildren: './pages/refresher/refresher.module#RefresherPageModule' },
+  { path: 'searchbar', loadChildren: './pages/searchbar/searchbar.module#SearchbarPageModule' }
 ];
 @NgModule({
   imports: [

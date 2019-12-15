@@ -1,0 +1,19 @@
+<app-header titulo="Refresher"></app-header>
+
+<ion-content>
+  <!-- (ionRefresh) = Evento emitido que activara un accion
+      pullFactor = Velocidad para relantizar la animación
+      pullMax = Distacia maxima de extracción para refrescar
+      pullMin = Distancia minima de extracción para refrescar
+      snapBackDuration = El tiempo que tarda la actualización en volver al estado refresh -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
+    <ion-refresher-content pullingText="Espere...." refreshingSpinner="dots" refreshingText="Cargando.."></ion-refresher-content>
+  </ion-refresher>
+  <h1 *ngIf="items.length > 0">Deslizar para refrescar</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index">
+      <ion-label>Item {{i + 1}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

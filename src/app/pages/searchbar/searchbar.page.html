@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button >
+    </ion-buttons>
+    <ion-title>Searchbar</ion-title>
+  </ion-toolbar>
+  <!-- La propiedad debounce estable el tiempo en el que se disparara el evento de busqueda-->
+  <ion-searchbar placeholder="Buscar" inputmode="email" type="decimal" (ionChange)="Buscar($event)" [debounce]="100" animated></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Usamos el pipe y le pasamos 3 argumentos, filtro, el texto de busqueda, la columna por la cual buscara -->
+    <ion-item *ngFor="let item of albums | filtro: textoBusqueda: 'title'">
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-label *ngIf="albums.length < 1">dasdasd</ion-label>
+</ion-content>

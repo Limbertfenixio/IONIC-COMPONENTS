@@ -98,5 +98,15 @@
       "icon" : "funnel",
       "name" : "Progressbar - Range",
       "route" : "/progressbar-range"
+    },
+    {
+      "icon" : "arrow-round-down",
+      "name" : "Refresher",
+      "route" : "/refresher"
+    },
+    {
+      "icon" : "search",
+      "name" : "Searchbar",
+      "route" : "/searchbar"
     }
   ]

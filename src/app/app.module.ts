@@ -1,3 +1,4 @@
+import { PipesModule } from './pipes/pipes.module';
 import { ModalComponent } from './components/modal/modal.component';
 import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [AppComponent],
   entryComponents: [ModalComponent],
   //Declaramos el modulo que vamos a usar
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ComponentsModule, BrowserAnimationsModule , FormsModule, ReactiveFormsModule , MaterialModule, HttpClientModule, RouterModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ComponentsModule, PipesModule, BrowserAnimationsModule , FormsModule, ReactiveFormsModule , MaterialModule, HttpClientModule, RouterModule],
   providers: [
     StatusBar,
     SplashScreen,
