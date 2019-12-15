@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'splash', loadChildren: './pages/splash/splash.module#SplashPageModule' },
   { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' },
   { path: 'reorder', loadChildren: './pages/reorder/reorder.module#ReorderPageModule' },
-  { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' }
+  { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' },
+  { path: 'progressbar-range', loadChildren: './pages/progressbar-range/progressbar-range.module#ProgressbarRangePageModule' }
 ];
 @NgModule({
   imports: [

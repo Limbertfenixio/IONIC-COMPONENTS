@@ -93,5 +93,10 @@
       "icon" : "tablet-portrait",
       "name" : "Popover",
       "route" : "/popover"
+    },
+    {
+      "icon" : "funnel",
+      "name" : "Progressbar - Range",
+      "route" : "/progressbar-range"
     }
   ]
