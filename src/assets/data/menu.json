@@ -108,5 +108,35 @@
       "icon" : "search",
       "name" : "Searchbar",
       "route" : "/searchbar"
+    },
+    {
+      "icon" : "copy",
+      "name" : "Segment",
+      "route" : "/segment"
+    },
+    {
+      "icon" : "basketball",
+      "name" : "Skeleton",
+      "route" : "/skeleton"
+    },
+    {
+      "icon" : "book",
+      "name" : "Slides",
+      "route" : "/slides"
+    },
+    {
+      "icon" : "cog",
+      "name" : "Tabs",
+      "route" : "/tabs"
+    },
+    {
+      "icon" : "thunderstorm",
+      "name" : "Toast",
+      "route" : "/toast"
+    },
+    {
+      "icon" : "bulb",
+      "name" : "Toggle",
+      "route" : "/toggle"
     }
   ]

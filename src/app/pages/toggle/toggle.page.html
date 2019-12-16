@@ -1,0 +1,42 @@
+<app-header titulo="Toggle"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Primary</ion-label>
+      <ion-toggle color="primary" [(ngModel)]="value" (ionChange)="toggle($event)"></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Secondary</ion-label>
+      <ion-toggle color="secondary" ></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Danger</ion-label>
+      <ion-toggle color="danger" ></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Warning</ion-label>
+      <ion-toggle color="warning" ></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Success</ion-label>
+      <ion-toggle color="success" checked></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Light</ion-label>
+      <ion-toggle color="light" ></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Tertiary</ion-label>
+      <ion-toggle color="tertiary" ></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>Dark</ion-label>
+      <ion-toggle color="dark" ></ion-toggle >
+    </ion-item>
+    <ion-item>
+      <ion-label>White</ion-label>
+      <ion-toggle color="white" ></ion-toggle >
+    </ion-item>
+  </ion-list>
+</ion-content>

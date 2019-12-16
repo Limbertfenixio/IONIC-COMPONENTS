@@ -1,0 +1,18 @@
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+}
+
+.swiper-slide {
+    display: block;
+}
+
+ion-slide > img {
+    max-height: 80%;
+    max-width: 80%;
+    margin-top: 60px;
+}
+
+.slide{
+    height: 100%;
+}

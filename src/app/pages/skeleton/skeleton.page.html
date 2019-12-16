@@ -1,0 +1,16 @@
+<app-header titulo="Skeleton"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of tareas | async">
+      <ion-label>{{ item.superhero }}</ion-label>
+      <ion-label slot="end" text-right>{{ item.publisher }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="(tareas | async) === null">
+    <ion-item *ngFor="let item of items | async">
+      <ion-label><ion-skeleton-text width="100%" animated></ion-skeleton-text></ion-label>
+      <ion-label slot="end" text-right><ion-skeleton-text width="100%" animated></ion-skeleton-text></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

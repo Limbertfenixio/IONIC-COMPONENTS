@@ -10,8 +10,8 @@ export class FiltroPipe implements PipeTransform {
 
     //Si el arreglo no tiene ni un texto de busqueda retornamos el arreglo entero
     if(texto === ''){
-      //return arreglo;
-      return null;
+      return arreglo;
+      //return null;
     }
 
     //Convertimos el texto a minuscula

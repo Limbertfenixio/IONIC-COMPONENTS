@@ -27,7 +27,13 @@ const routes: Routes = [
   { path: 'popover', loadChildren: './pages/popover/popover.module#PopoverPageModule' },
   { path: 'progressbar-range', loadChildren: './pages/progressbar-range/progressbar-range.module#ProgressbarRangePageModule' },
   { path: 'refresher', loadChildren: './pages/refresher/refresher.module#RefresherPageModule' },
-  { path: 'searchbar', loadChildren: './pages/searchbar/searchbar.module#SearchbarPageModule' }
+  { path: 'searchbar', loadChildren: './pages/searchbar/searchbar.module#SearchbarPageModule' },
+  { path: 'segment', loadChildren: './pages/segment/segment.module#SegmentPageModule' },
+  { path: 'skeleton', loadChildren: './pages/skeleton/skeleton.module#SkeletonPageModule' },
+  { path: 'slides', loadChildren: './pages/slides/slides.module#SlidesPageModule' },
+  { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  { path: 'toast', loadChildren: './pages/toast/toast.module#ToastPageModule' },
+  { path: 'toggle', loadChildren: './pages/toggle/toggle.module#TogglePageModule' }
 ];
 @NgModule({
   imports: [

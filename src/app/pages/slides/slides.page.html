@@ -1,0 +1,10 @@
+<ion-content fullscreen scroll-y="false">
+  <ion-slides mode="ios" pager="true" scrollbar="ios" class="slide">
+    <ion-slide *ngFor="let item of dataSlide">
+      <img [src]="item.img">
+      <h1>{{ item.titulo }}</h1>
+      <p>{{ item.desc }}</p>
+      <ion-button *ngIf="item.desc === ''" fill="clear" (click)="finalize()">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

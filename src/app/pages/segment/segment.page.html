@@ -1,0 +1,28 @@
+<app-header titulo="Segment"></app-header>
+
+<ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)" color="tertiary">
+    <ion-segment-button value="">
+      <ion-label>Todos</ion-label>
+      <ion-icon name="done-all"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="DC Comics">
+      <ion-label>DC Comics</ion-label>
+      <ion-icon name="aperture"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="Marvel Comics">
+      <ion-label>Marvel Comics</ion-label>
+      <ion-icon name="logo-markdown"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+  <ion-list>
+    <!-- Iteramos los datos con el pipe async y filtramos por segment con el pipe filtro pasandole el valor y la columna por la cual filtrar -->
+    <ion-item *ngFor="let item of heroes | async | filtro: segmentValue: 'publisher'">
+      <ion-label>{{ item.superhero }}</ion-label>
+      <ion-label slot="end" text-right>{{ item.publisher }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
