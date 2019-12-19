@@ -33,7 +33,8 @@ const routes: Routes = [
   { path: 'slides', loadChildren: './pages/slides/slides.module#SlidesPageModule' },
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'toast', loadChildren: './pages/toast/toast.module#ToastPageModule' },
-  { path: 'toggle', loadChildren: './pages/toggle/toggle.module#TogglePageModule' }
+  { path: 'toggle', loadChildren: './pages/toggle/toggle.module#TogglePageModule' },
+  { path: 'autocomplete', loadChildren: './pages/autocomplete/autocomplete.module#AutocompletePageModule' }
 ];
 @NgModule({
   imports: [

@@ -6,3 +6,9 @@ export interface Componente{
     'name' : string;
     'route' : string;
 }
+
+
+export interface Ciudad{
+  'nombre' : string;
+  'pais' : string;
+}

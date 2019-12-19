@@ -1,0 +1,14 @@
+<app-header titulo="Autocomplete"></app-header>
+
+<ion-content>
+  <form class="form">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Ciudad" aria-label="ciudades" [matAutocomplete]="auto" [formControl]="ciudadCtrl">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let item of filteredCiudades | async " [value]="item">
+          <span>{{item.nombre}}</span>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</ion-content>

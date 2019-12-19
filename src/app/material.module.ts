@@ -10,7 +10,8 @@ import {
   MatSelectModule,
   MatIconModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatAutocompleteModule
 } from "@angular/material";
 
 
@@ -29,7 +30,8 @@ import {
     MatOptionModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatAutocompleteModule
   ]
 })
 export class MaterialModule { }
